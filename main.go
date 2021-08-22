@@ -34,4 +34,14 @@ func main() {
 	newSliceByAppendingValue := append(goals, 90)
 
 	fmt.Println("goals:", goals, "newSliceByAppendingValue:", newSliceByAppendingValue, "newSliceByAppendingValue length:", len(newSliceByAppendingValue))
+
+	//Slice Ranges
+
+	fmt.Println("Slice Ranges")
+
+	firstRange := goals[0:2]
+	secondRange := goals[1:]
+	thirdRange := goals[:2]
+
+	fmt.Println(firstRange, secondRange, thirdRange)
 }
