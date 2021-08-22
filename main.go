@@ -3,37 +3,23 @@ package main
 import "fmt"
 
 func main() {
-	name := "Kağan"
-	age := 99
+	//Arrays
 
-	// Printf formats according to a format specifier and writes to standard output.
-	// It returns the number of bytes written and any write error encountered.
+	var things [3]int = [3]int{1, 3, 4}
 
-	// Printinh things
-	fmt.Print("hello, ")
-	fmt.Print("boom! \n")
-	fmt.Print("new line! \n")
+	// Don't allow us to create four length array
+	//var things [3]int = [3]int{1, 3, 4}
 
-	println("höllööö")
-	println("höllööö 2")
+	// Don't let us declare string
+	//var things [3]int = [3]int{1, 3, "string"}
 
-	// Formated Strings
-	// See how the console output order is :)
+	//Displaying length of an array
+	number := [3]int{1, 2, 3}
+	//fmt.Println(things, number, len(number))
 
-	println("formatted sTrings")
-	fmt.Printf("age: %d, name: %q \n", age, name)
+	// Computed properties for defining arrays with shorthand variable.
+	//"d" is not allowed since number len is 3
+	names := [len(number)]string{"a", "b", "c"}
 
-	//Logging type of the var
-	fmt.Printf("type of age is %T \n", age)
-
-	//Param logging
-	fmt.Printf("log the given %f variable \n", 999.99)
-	fmt.Printf("log the given %0.1f variable \n", 999.99)
-	fmt.Printf("log the given %0.11f variable \n", 999.99)
-
-	//fmt.Sprintf() Save formatted strings
-	var test = fmt.Sprintf("bla bla %v", name)
-	println("saved string is", test)
-
-	//https://pkg.go.dev/fmt
+	fmt.Println(things, names)
 }
