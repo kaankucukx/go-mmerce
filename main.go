@@ -22,4 +22,16 @@ func main() {
 	names := [len(number)]string{"a", "b", "c"}
 
 	fmt.Println(things, names)
+
+	// Slices (use Arrays)
+	//You can change the value of a property of both Array and Slices with targeting index [1] and you can return new Slice by using append fn. Append does not work on Arrays
+
+	var goals = []int{3, 5, 6}
+
+	fmt.Println("goals:", goals)
+	goals[2] = 10
+
+	newSliceByAppendingValue := append(goals, 90)
+
+	fmt.Println("goals:", goals, "newSliceByAppendingValue:", newSliceByAppendingValue, "newSliceByAppendingValue length:", len(newSliceByAppendingValue))
 }
